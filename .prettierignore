@@ -1,0 +1,6 @@
+dist/
+package.json
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+src/vite-env.d.ts

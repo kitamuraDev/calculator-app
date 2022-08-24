@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false, // [".js", ".jsx"]もコンパイル対象に入れる。それらの拡張子では書かないのでfalse
+    "skipLibCheck": true, // 型定義ファイル(*.d.ts)のチェックをスキップ
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true, // 次のようなimportが可能になる。import React from "react";
+    "strict": true,
+    "forceConsistentCasingInFileNames": true, // import時のファイルパスを大文字と小文字で区別するか
+    "moduleResolution": "Node", // tscのモジュール解決の方法。特別な事情がないので"Node"
+    "resolveJsonModule": true, // ".json"の型解決を行う
+    // コンパイル対象のファイル間の関係性を一切無視して、全てのファイルを単一のモジュールとしてコンパイルする。
+    // その場合の安全でない記法についてコンパイル時にエラーを出すようにする。
+    "isolatedModules": true,
+    "useDefineForClassFields": true, // 最新の Class フィールドの仕様へ移行するためのオプション。デフォルトでtrueになっていたので特に弄らない
+    "noFallthroughCasesInSwitch": true, // switch文のcaseを安全に記述するためのオプション。とりあえずtrueにしておけ系
+    "noEmit": true, // コンパイル結果を出力しない。
+    "jsx": "react-jsx"
+  },
+  "include": ["src/**/*"], // コンパイル対象ファイルを指定。"src/**/*"で再起的にすべてコンパイル対象にする
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
