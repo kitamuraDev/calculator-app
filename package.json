@@ -3,6 +3,7 @@
   "description": "Calculator Application made by React and TypeScript. Build with Vite",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://kitamuradev.github.io/calculator-app",
   "license": "MIT",
   "type": "module",
   "scripts": {
