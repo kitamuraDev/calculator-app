@@ -9,7 +9,7 @@ const App = () => {
   const [calc, setCalc] = useState(''); // 計算式。この中に文字列の計算式が入る（例: "2 + 3 * 5 / 2"）
   const [result, setResult] = useState(''); // 計算結果
 
-  const ops = ['/', '*', '+', '-', '.', '='];
+  const ops = ['/', '*', '+', '-', '.'];
 
   const handleUpdateCalc = (value: string): void => {
     /**
@@ -71,13 +71,13 @@ const App = () => {
               {i + 1}
             </button>
           ))}
-          <button type='button' onClick={() => handleUpdateCalc('0')}>
+          <button type='button' onClick={() => handleUpdateCalc('0')} disabled={calc === ''}>
             0
           </button>
           <button type='button' onClick={() => handleUpdateCalc('.')}>
             .
           </button>
-          <button type='button' onClick={() => calculate()}>
+          <button type='button' onClick={() => calculate()} disabled={calc === ''}>
             =
           </button>
         </div>
